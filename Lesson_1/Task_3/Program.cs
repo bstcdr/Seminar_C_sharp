@@ -4,11 +4,19 @@
 
 int number = int.Parse(Console.ReadLine());
 
-int i = 0;
-int result = 0;
-for (i = 0; i < ((number * 2) + 1); i++)
+if (number > 0)
 {
-    result = (number * (-1)) + i;
-    Console.WriteLine(result);
-} 
-
+    for (int i = -number; i <= number; i++)
+    {
+        Console.Write(i);
+        Console.Write(", ");
+    } 
+}
+else
+{
+    for (int i = number; i <= -number; i++)
+    {
+        Console.Write(i);
+        Console.Write(", ");
+    } 
+}
